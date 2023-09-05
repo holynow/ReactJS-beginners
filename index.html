@@ -1,0 +1,22 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Me</title>
+</head>
+<body>
+    <span>Total Clicks : </span><span id="clickNum">0</span>
+    <button id="btn">Click me</button>
+</body>
+    <script>
+
+        let clickNum = 0;
+        const btn = document.getElementById("btn");
+        handleClick = () => {
+            clickNum += 1;
+            const totalClick = document.getElementById("clickNum");
+            totalClick.innerHTML = clickNum;
+        }
+        btn.addEventListener('click', handleClick);
+    </script>
+</html>
